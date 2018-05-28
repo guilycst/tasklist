@@ -10,7 +10,7 @@
   - spring.datasource.username=root
   - spring.datasource.password=admin
   
-  Caso o **endereço do banco**, **nome do usuario** ou **senha do banco** estejam diferentes no seu ambiente, se faz necessário atualizar as propriedades da acima de acordo.
+  Caso o **endereço do banco**, **nome do usuario** ou **senha** estejam diferentes no seu ambiente, se faz necessário atualizar as propriedades acima de acordo.
   
 ## Executando
 
