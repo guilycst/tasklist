@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tasklist</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+
+<body>
+    <div ng-app='taskList' class='list-area'>
+        <div ng-controller='taskListController'>
+            <h1>Tasklist</h1>
+            <div class="inline-container">
+                <input type='text' placeholder='tarefa' ng-model='task.content' required>
+                <input type='button' ng-click='addTask(task)' ng-disabled='!task.content' value='+'>
+            </div>
+            <h2 ng-if="tasks.length">Suas tarefas:</h2>
+            <ul>
+                <li ng-repeat='task in tasks'>
+                    <div class="inline-container">
+                        <div>
+                            <input type='checkbox' ng-model='task.done' ng-change="taskChanged(task)">
+                            <label ng-click="editTask(task)" ng-show="!task._editing">{{task.content}}</label>
+                            <input type='text' tabindex="-1" placeholder='tarefa' ng-attr-id="edit-{{task.id}}" ng-model='task.content' ng-show="task._editing" ng-blur="doneEditing(task)">
+                        </div>
+                        <input type='button' ng-click='removeTask(task)' value='-'>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
