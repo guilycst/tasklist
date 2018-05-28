@@ -3,9 +3,10 @@
 ## Requerimentos:
 
 1) Maven 3.5.3 ou versão maior
-2) MySQL 5.7.21 ou versão maior
-2) No MySQL, criar schema com o nome **tasklist**.
-3) No arquivo application.properties, estão definidas a propriedades:
+2) Adicionar o maven no path do SO
+3) MySQL 5.7.21 ou versão maior
+4) No MySQL, criar schema com o nome **tasklist**.
+5) No arquivo application.properties, estão definidas a propriedades:
   - spring.datasource.url=jdbc:mysql://localhost:3306/tasklist
   - spring.datasource.username=root
   - spring.datasource.password=admin
@@ -14,4 +15,22 @@
   
 ## Executando
 
-executar o comando **mvn spring-boot:run**
+No raiz do projeto, executar o comando **mvn spring-boot:run** com seu CLI preferido.
+
+## Usando a aplicação:
+De acordo com os requisitos definidos no desafio:
+
+1) Adicionar novas tarefas;
+> Utilizar o input **'TAREFA'** e acionar o botão **'+'**
+
+2) Marcar e desmarcar o status de concluído;
+> Após adicionar pelo menos uma tarefa, na lista de **'SUAS TAREFAS'**, acionar o checkbox.
+
+3) Editar o conteúdo da task;
+> Na lista **'SUAS TAREFAS'**, o conteúdo se torna editável ao realizar um click no texto da tarefa. Salva ao sair do campo.
+
+4) Deletar uma task;
+> Na lista **'SUAS TAREFAS'**, do lado de cada um dos itens há um botão **'-'**. Acionar o botão remove a tarefa correspondente.
+
+
+
