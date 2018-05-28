@@ -15,7 +15,9 @@
   
 ## Executando
 
-No raiz do projeto, executar o comando **mvn spring-boot:run** com seu CLI preferido.
+1) A aplicação vai usar a porta **8080**, tenha certeza que ela esteja livre.
+2) Na raiz do projeto, executar o comando **mvn spring-boot:run** com seu CLI preferido.
+3) Se tudo for bem sucedido, deve ser possível acessar a tasklist no endereço http://localhost:8080/
 
 ## Usando a aplicação:
 De acordo com os requisitos definidos no desafio:
